@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: samridh-test3
+  labels: 
+    env: beta
+spec:
+  nodeSelector:
+    TG: "yes"
+  containers:
+  - image: samridhrakesh/cherrypy
+    name: samridhr
+    ports:
+    - containerPort: 8080
+      protocol: TCP
